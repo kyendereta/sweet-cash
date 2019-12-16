@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-    'Hello World'
+    'Welcome to Sweet Cash where your cash feels at home'
 end

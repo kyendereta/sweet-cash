@@ -11,9 +11,9 @@ RSpec.describe 'Sweet Cash App' do
     Sinatra::Application
   end
 
-  it "says hello" do
+  it "welcomes the user" do
     get '/'
     expect(last_response).to be_ok
-    expect(last_response.body).to eq('Hello World')
+    expect(last_response.body).to eq('Welcome to Sweet Cash where your cash feels at home')
   end
 end
