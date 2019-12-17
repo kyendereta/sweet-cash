@@ -11,9 +11,16 @@ RSpec.describe 'Sweet Cash App' do
     Sinatra::Application
   end
 
-  it "welcomes the user" do
+  it "shows the menu list" do
     get '/'
-    expect(last_response).to be_ok
-    expect(last_response.body).to eq('Welcome to Sweet Cash where your cash feels at home')
+    expect(last_response.body).to eq("Menu")
+    expect(last_response.body).to eq("Deposit Cash")
+    expect(last_response.body).to eq("Withdraw cash")
+    expect(last_response.body).to eq("Send Cash")
+    expect(last_response.body).to eq("Check Balance")
+    expect(last_response.body).to eq("Save with Sweet Cash")
+    expect(last_response.body).to eq("Previous Page")
+    expect(last_response.body).to eq("Feedback")
+    expect(last_response.body).to eq("Log Out")
   end
 end
