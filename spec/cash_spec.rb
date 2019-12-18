@@ -13,14 +13,14 @@ RSpec.describe 'Sweet Cash App' do
 
   it "shows the menu list" do
     get '/'
-    expect(last_response.body).to eq("Menu")
-    expect(last_response.body).to eq("Deposit Cash")
-    expect(last_response.body).to eq("Withdraw cash")
-    expect(last_response.body).to eq("Send Cash")
-    expect(last_response.body).to eq("Check Balance")
-    expect(last_response.body).to eq("Save with Sweet Cash")
-    expect(last_response.body).to eq("Previous Page")
-    expect(last_response.body).to eq("Feedback")
-    expect(last_response.body).to eq("Log Out")
+    expect(last_response.body).to match(/Menu/)
+    expect(last_response.body).to match(/Deposit Cash/)
+    expect(last_response.body).to match(/Withdraw Cash/)
+    expect(last_response.body).to match(/Send Cash/)
+    expect(last_response.body).to match(/Check Balance/)
+    expect(last_response.body).to match(/Save with Sweet Cash/)
+    expect(last_response.body).to match(/Previous Page/)
+    expect(last_response.body).to match(/Feedback/)
+    expect(last_response.body).to match(/Log Out/)
   end
 end
