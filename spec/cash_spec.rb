@@ -34,8 +34,7 @@ RSpec.describe 'Sweet Cash App' do
   end
 
   it "allows user to deposit" do
-    post '/deposit', {amount: }
-    params ={amount: 60}
-    expect(last_response.body).to eq("Deposited #{params[:amount]}")  
+    post '/deposit', {amount: 60} 
+    expect(last_response.body).to eq("Deposited 60")    
   end
 end

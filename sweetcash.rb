@@ -10,7 +10,7 @@ get '/deposit' do
     erb :deposit
 end
 post '/deposit' do
-  "Deposited"
+  "Deposited #{params[:amount]}"
 end
 
 
