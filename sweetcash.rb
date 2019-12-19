@@ -1,14 +1,18 @@
 require 'sinatra'
 require 'erb'
 
-# get '/' do
-#     'Welcome to Sweet Cash where your cash feels at home'
-# end
-
 get '/' do
     
     erb :menu
 end
+
+get '/deposit' do
+    erb :deposit
+end
+post '/deposit' do
+  "Deposited"
+end
+
 
 __END__
 @@menu
@@ -23,3 +27,14 @@ __END__
 <li>Feedback</li>
 <li>Log Out</li>
 </ul>
+
+@@deposit
+<h1>Deposit Cash</h1>
+<body>
+<form  method="post" target="_blank">
+  Deposit Amount: <input type="number"><br>
+  Account Number: <input type="number"><br>
+  <input type="submit" value="Save">
+  <input type="submit" value="Cancel">
+</form>
+</body>
