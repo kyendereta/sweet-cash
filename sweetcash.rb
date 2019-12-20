@@ -9,10 +9,18 @@ end
 get '/deposit' do
     erb :deposit
 end
+
 post '/deposit' do
   "Deposited #{params[:amount]}"
 end
 
+get '/withdraw' do
+  erb :withdraw
+end
+
+post '/withdraw' do
+  "Withdrew #{params[:amount]}"
+end
 
 __END__
 @@menu
@@ -38,3 +46,14 @@ __END__
   <input type="submit" value="Cancel">
 </form>
 </body>
+
+@@withdraw
+<h1>Withdraw Cash</h1>
+<form  method="post" target="_blank">
+  Withdraw Amount: <input type="number"><br>
+  Account Number: <input type="number"><br>
+  <input type="submit" value="Save">
+  <input type="submit" value="Cancel">
+</form>
+</body>
+

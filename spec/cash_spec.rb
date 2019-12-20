@@ -37,4 +37,19 @@ RSpec.describe 'Sweet Cash App' do
     post '/deposit', {amount: 60} 
     expect(last_response.body).to eq("Deposited 60")    
   end
-end
+
+  it "allows user to go to withdraw page" do
+    get '/withdraw'
+    expect(last_response.body).to match(/Withdraw Cash/)
+    expect(last_response.body).to match(/Withdraw Amount/)
+    expect(last_response.body).to match(/Account Number/)
+    expect(last_response.body).to match(/Save/)
+    expect(last_response.body).to match(/Cancel/)
+  end
+
+  it "allows user to withdraw cash"do
+    post '/withdraw', {amount: 30} 
+    expect(last_response.body).to eq("Withdrew 30") 
+  end
+
+ 
