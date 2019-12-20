@@ -52,7 +52,7 @@ RSpec.describe 'Sweet Cash App' do
     end
   
     it "allows user give feedback " do
-      get '/feedback'
+      get '/Feedback'
     expect(last_response.body).to match(/Feedback/)
     expect(last_response.body).to match(/Here at sweet cash we value your feedback/)
     expect(last_response.body).to match(/Feel free to contact us/)
