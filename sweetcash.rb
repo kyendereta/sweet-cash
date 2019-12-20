@@ -10,6 +10,13 @@ get '/deposit' do
     erb :deposit
 end
 
+get '/send' do
+  erb :send
+end
+
+get '/Feedback' do
+  erb :Feedback
+end
 post '/deposit' do
   "Deposited #{params[:amount]}"
 end
@@ -21,6 +28,10 @@ end
 post '/withdraw' do
   "Withdrew #{params[:amount]}"
 end
+post '/send' do
+  "Send #{params[:amount]}"
+end
+
 
 __END__
 @@menu
@@ -47,6 +58,18 @@ __END__
 </form>
 </body>
 
+
+@@send
+<h1>Send Cash</h1>
+<body>
+<form method="post" target="_blank">
+Send Amount: <input type="number"><br>
+Account Number: <input type ="number"><br>
+<input type="submit" value="Save">
+<input type="submit" value="Cancel">
+</form>
+</body>
+
 @@withdraw
 <h1>Withdraw Cash</h1>
 <form  method="post" target="_blank">
@@ -56,4 +79,14 @@ __END__
   <input type="submit" value="Cancel">
 </form>
 </body>
+
+
+@@Feedback
+<h1>Feedback</h1>
+
+<p>Here at sweet cash we value your feedback</p>
+  <p>Feel free to contact us</p>
+  <p>Look for us at 07000695694</p>
+  <p>Feedback</p>
+  
 
