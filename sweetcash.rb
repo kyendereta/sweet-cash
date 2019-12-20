@@ -21,6 +21,13 @@ post '/deposit' do
   "Deposited #{params[:amount]}"
 end
 
+get '/withdraw' do
+  erb :withdraw
+end
+
+post '/withdraw' do
+  "Withdrew #{params[:amount]}"
+end
 post '/send' do
   "Send #{params[:amount]}"
 end
@@ -63,13 +70,23 @@ Account Number: <input type ="number"><br>
 </form>
 </body>
 
+@@withdraw
+<h1>Withdraw Cash</h1>
+<form  method="post" target="_blank">
+  Withdraw Amount: <input type="number"><br>
+  Account Number: <input type="number"><br>
+  <input type="submit" value="Save">
+  <input type="submit" value="Cancel">
+</form>
+</body>
+
+
 @@Feedback
 <h1>Feedback</h1>
 
-<ul>
-  <li>Here at sweet cash we value your feedback</li>
-  <li>Feel free to contact us</li>
-  <li>Look for us at 07000695694</li>
-  <li>Feedback</li>
-</ul>  
+<p>Here at sweet cash we value your feedback</p>
+  <p>Feel free to contact us</p>
+  <p>Look for us at 07000695694</p>
+  <p>Feedback</p>
+  
 
