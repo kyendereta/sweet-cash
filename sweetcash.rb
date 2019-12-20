@@ -22,6 +22,14 @@ post '/withdraw' do
   "Withdrew #{params[:amount]}"
 end
 
+get '/checkbalance' do
+  erb :checkbalance
+end
+
+post '/checkbalance' do
+ "Your balance is #{@balance}"
+end
+
 __END__
 @@menu
 <h1>Menu</h1>
@@ -57,3 +65,11 @@ __END__
 </form>
 </body>
 
+@@checkbalance
+<h1>Check Balance</h1>
+<form  method="post" target="_blank">
+  Account Number: <input type="number"><br>
+  <input type="submit" value="Check">
+  <input type="submit" value="Cancel">
+</form>
+</body>

@@ -52,4 +52,17 @@ RSpec.describe 'Sweet Cash App' do
     expect(last_response.body).to eq("Withdrew 30") 
   end
 
+  it "allows user to go to check balance page" do
+    get '/checkbalance'
+    expect(last_response.body).to match(/Check Balance/)
+    expect(last_response.body).to match(/Account Number/)
+    expect(last_response.body).to match(/Check/)
+    expect(last_response.body).to match(/Check/)
+  end
+
+  it "allows user to check balance" do
+    post '/checkbalance'
+    expect("Your balance is #{@balance}").to eq("Your balance is #{@balance}")
+  end
+
 end
