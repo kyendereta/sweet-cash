@@ -18,6 +18,9 @@ post '/deposit' do
   "Deposited #{params[:amount]}"
 end
 
+post '/send' do
+  "Send #{params[:amount]}"
+end
 
 __END__
 @@menu
