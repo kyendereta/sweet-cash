@@ -9,10 +9,18 @@ end
 get '/deposit' do
     erb :deposit
 end
+
+get '/send' do
+  erb :send
+end
+
 post '/deposit' do
   "Deposited #{params[:amount]}"
 end
 
+post '/send' do
+  "Send #{params[:amount]}"
+end
 
 __END__
 @@menu
@@ -36,5 +44,17 @@ __END__
   Account Number: <input type="number"><br>
   <input type="submit" value="Save">
   <input type="submit" value="Cancel">
+</form>
+</body>
+
+
+@@send
+<h1>Send Cash</h1>
+<body>
+<form method="post" target="_blank">
+Send Amount: <input type="number"><br>
+Account Number: <input type ="number"><br>
+<input type="submit" value="Save">
+<input type="submit" value="Cancel">
 </form>
 </body>
