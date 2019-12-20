@@ -14,6 +14,9 @@ get '/send' do
   erb :send
 end
 
+get '/Feedback' do
+  erb :Feedback
+end
 post '/deposit' do
   "Deposited #{params[:amount]}"
 end
@@ -21,6 +24,7 @@ end
 post '/send' do
   "Send #{params[:amount]}"
 end
+
 
 __END__
 @@menu
@@ -58,3 +62,14 @@ Account Number: <input type ="number"><br>
 <input type="submit" value="Cancel">
 </form>
 </body>
+
+@@Feedback
+<h1>Feedback</h1>
+
+<ul>
+  <li>Here at sweet cash we value your feedback</li>
+  <li>Feel free to contact us</li>
+  <li>Look for us at 07000695694</li>
+  <li>Feedback</li>
+</ul>  
+
