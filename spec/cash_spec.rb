@@ -51,4 +51,11 @@ RSpec.describe 'Sweet Cash App' do
       expect(last_response.body).to eq("Send 60")    
     end
   
-end
+    it "allows user give feedback " do
+      get '/Feedback'
+    expect(last_response.body).to match(/Feedback/)
+    expect(last_response.body).to match(/Here at sweet cash we value your feedback/)
+    expect(last_response.body).to match(/Feel free to contact us/)
+    expect(last_response.body).to match(/Look for us at 07000695694/)
+    end
+  end
