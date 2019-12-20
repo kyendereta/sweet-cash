@@ -52,4 +52,4 @@ RSpec.describe 'Sweet Cash App' do
     expect(last_response.body).to eq("Withdrew 30") 
   end
 
- 
+end
