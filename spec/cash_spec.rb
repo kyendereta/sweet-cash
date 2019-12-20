@@ -45,4 +45,10 @@ RSpec.describe 'Sweet Cash App' do
     expect(last_response.body).to match(/Save/)
     expect(last_response.body).to match(/Cancel/)
     end
-  end
+
+    it "allows user to send" do
+      post '/send', {amount: 60} 
+      expect(last_response.body).to eq("Send 60")    
+    end
+  
+end
