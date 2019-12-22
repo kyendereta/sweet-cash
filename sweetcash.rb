@@ -17,9 +17,11 @@ end
 get '/Feedback' do
   erb :Feedback
 end
+
 post '/deposit' do
   "Deposited #{params[:amount]}"
 end
+
 
 get '/withdraw' do
   erb :withdraw
