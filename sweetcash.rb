@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/reloader'
 require 'erb'
 
 get '/' do
@@ -32,16 +33,24 @@ end
 
 __END__
 @@menu
+<style>
+h1{
+  text-align: left;
+  color: blue;
+}
+a{
+  text-decoration:none;
+}
+</style>
 <h1>Menu</h1>
-<ul>
-<li>Deposit Cash</li>
-<li>Withdraw Cash</li>
-<li>Send Cash</li>
-<li>Check Balance</li>
+<ul style="list-style: none;">
+<a href="http://localhost:9292/deposit"><li>Deposit Cash</li></a>
+<a href="http://localhost:9292/withdraw"><li>Withdraw Cash</li>
+<a href="http://localhost:9292/send"><li>Send Cash</li>
+<a href="http://localhost:9292/checkbalance"><li>Check Balance</li>
 <li>Save with Sweet Cash</li>
 <li>Previous Page</li>
 <li>Feedback</li>
-<li>Log Out</li>
 </ul>
 
 @@deposit
